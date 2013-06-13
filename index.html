@@ -62,6 +62,36 @@
 		                
 		              </ul>
 		            </div><!--/.nav-collapse -->
+		            
+		            <ul class="nav pull-right">
+		            	<li style="padding-top: 10px;">
+					  			<span id="signinButton">
+								  <span
+								    class="g-signin"
+								    data-callback="signinCallback"
+								    data-clientid="868611294351.apps.googleusercontent.com"
+								    data-cookiepolicy=data-cookiepolicy="http://gdays.whales.com.ng"
+								    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+								    data-scope="https://www.googleapis.com/auth/plus.login" style="display: none">
+								  </span>
+								</span>
+					  		</li>
+					  <li class="dropdown" style="display: none;" id="profile" >
+					    <a href="#"
+					          class="dropdown-toggle"
+					          data-toggle="dropdown" >
+					          <span id="name"></span>
+					          <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">					
+					  		<li class="socials"><a id="revokeButton" href="#" style="display: none;">Logout</a></li>
+					  							
+					    </ul>
+					  </li>
+					  
+					  <li><a href="#" style="padding-top: 10px;padding-bottom: 0px;"> <img src="img/android.png" width="35px" height="35px" id="profile-img" /> </a></li>
+					</ul>
+		            
 		          </div><!-- /.navbar-inner -->
 		        </div><!-- /.navbar -->
 		
@@ -80,46 +110,36 @@
 				
 				<div class="row">
 					<div class="span7">
-						<img class="img-polaroid" src="img/plus.png" width="700px" height="auto"/>
+						<img class="img-polaroid" src="img/plus.png" min-width="700px" min-height="340px" max-width="700px" max-height="340px" id="cover"/>
 					</div>
 					<div class="span5 media" style="padding-top: 50px;">
 					  <a class="pull-left" href="#">
-					    <img class="media-object" src="img/chrome.png" width="80px" height="auto" itemprop="image"/>
+					    <img class="media-object" src="img/chrome.png" width="80px" height="auto" itemprop="image" id="icon"/>
 					  </a>
 					  <div class="media-body">
-					    <h4 class="media-heading" itemprop="name">Google+ SignIn</h4>
-					    <p itemprop="description">Learn how to Integrate Google Plus sign-in to your web applications.</p>					    
+					    <h4 class="media-heading" itemprop="name" id="title">Google+ SignIn</h4>
+					    <p itemprop="description" id="description">Learn how to Integrate Google Plus sign-in to your web applications.</p>					    
 					  </div>
 					  <div style="padding-top: 50px; padding-left: 50px;">
-					  	<button class="btn btn-large btn-primary" id="loud" onclick="loudIt()">Loud It on Google+ </button>
-					    
-				
-						
-						<p>You are signed in as:<br /><strong id="name">???</strong></p>
-						<a id="revokeButton" class="btn btn-danger" href="#" style="display: none;">Logout</a><br />
-						<span id="signinButton">
-						  <span
-						    class="g-signin"
-						    data-callback="signinCallback"
-						    data-clientid="868611294351.apps.googleusercontent.com"
-						    data-cookiepolicy=data-cookiepolicy="http://whales.com.ng"
-						    data-requestvisibleactions="http://schemas.google.com/AddActivity"
-						    data-scope="https://www.googleapis.com/auth/plus.login" style="display: none">
-						  </span>
-						</span>
+					  	<button class="btn btn-large btn-primary g-interactivepost" id="loud" data-contenturl="http://gdays.whales.com.ng/"
+							  data-clientid="868611294351.apps.googleusercontent.com"
+							  data-cookiepolicy="single_host_origin"
+							  data-prefilltext="I'm at the #gDays in Nigeria. I'm learning how to integrate Google+ into my applications #gDaysNigeria #gdg."
+							  data-calltoactionlabel="CHECKIN"
+							  data-calltoactionurl="http://gdays.whales.com.ng/">Loud It on Google+ </button>
+					  	<p><!-- Place the tag where you want the button to render -->
+
 					  </div>
 					 </div>
 				</div>
 				<div>
-					<div class="pagination">
+					<div class="pagination" id="board">
 					  <ul>
-					    <li><a href="#">Prev</a></li>
-					    <li><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li><a href="#">Next</a></li>
+					    <li><a href="#" data-attr="1">1</a></li>
+					    <li><a href="#" data-attr="2">2</a></li>
+					    <li><a href="#" data-attr="3">3</a></li>
+					    <li><a href="#" data-attr="4">4</a></li>
+					    <li><a href="#" data-attr="5">5</a></li>
 					  </ul>
 					</div>
 				</div>
@@ -141,13 +161,15 @@
 	        <script src="js/main.js"></script> -->
 	    <!-- Le javascript
 	    ================================================== -->
+	    
 	    <!-- Placed at the end of the document so the pages load faster -->
 	    <script src="assets/js/jquery.js"></script>
 	    <script src="assets/js/bootstrap-transition.js"></script>
 	    <script src="assets/js/bootstrap-alert.js"></script>
 	    <script src="assets/js/bootstrap-modal.js"></script>
-	    <!--<script src="assets/js/bootstrap-dropdown.js"></script>
-	    <script src="assets/js/bootstrap-scrollspy.js"></script>
+	    <script src="assets/js/bootstrap-dropdown.js"></script>
+	    <script src="assets/js/bootstrap-collapse.js"></script>
+	    <!--<script src="assets/js/bootstrap-scrollspy.js"></script>
 	    <script src="assets/js/bootstrap-tab.js"></script>
 	    <script src="assets/js/bootstrap-tooltip.js"></script>
 	    <script src="assets/js/bootstrap-popover.js"></script>

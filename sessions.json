@@ -1,0 +1,45 @@
+{
+    "session": [
+      {
+        "title": "Google+ SignIn",
+        "description": "Learn how to Integrate Google Plus sign-in to your web applications.",
+        "share": "I'm at the #gDays in Nigeria. I'm learning how to integrate Google+ into my applications #gDaysNigeria #gdg.",
+        "speakerid": "101522065855804710234",
+        "icon": "plus-icon.png",
+        "cover": "plus.png"
+      },
+      {
+        "title": "Android",
+        "description": "Learn how to Integrate Google Plus sign-in to your web applications.",
+        "share": "I'm at the #gDays in Nigeria. I'm learning how to build exciting Android applications #gDaysNigeria #gdg.",
+        "speakerid": "108000156525307744962",
+        "icon": "android.png",
+        "cover": "android-banner.jpeg"
+      },
+      {
+        "title": "Location APIs",
+        "description": "Learn how to Integrate Google Plus sign-in to your web applications.",
+        "share": "I'm at the #gDays in Nigeria. I'm learning about the new Location API's from Google #gDaysNigeria #gdg.",
+        "speakerid": "103735976334615631393",
+        "icon": "map-icon.png",
+        "cover": "map-banner.jpg"
+      },
+      {
+        "title": "Game Development",
+        "description": "Learn how to Integrate Google Plus sign-in to your web applications.",
+        "share": "I'm at the #gDays in Nigeria. I'm learning about Game Development #gDaysNigeria #gdg.",
+        "speakerid": "101522065855804710234",
+        "icon": "android.png",
+        "cover": "game-banner.jpg"
+      },
+      {
+        "title": "Web Frameworks",
+        "description": "Cutting-Edge Technologies & Frameworks Redefining the Web",
+        "share": "I'm at the #gDays in Nigeria. I'm learning aout exciting Web Frameworks #gDaysNigeria #gdg.",
+        "speakerid": "107893286930185956823",
+        "icon": "android.png",
+        "cover": "android-banner.jpeg"
+      }
+    ]
+
+}
