@@ -52,13 +52,12 @@
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		            </button>
-		            <a class="brand" href="#">g|Days</a>
+		            <a class="brand active" href="#" itemprop="name" >G|Days</a>
 		            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 		            <div class="nav-collapse collapse">
 		              <ul class="nav">
-		                <li><a href="#">Home</a></li>
-		                <li class="active"><a href="#about">About</a></li>
-		                <li><a href="#contact">Contact</a></li>
+		                <li><a href="#" class="active">Home</a></li>
+		                
 		                
 		              </ul>
 		            </div><!--/.nav-collapse -->
@@ -69,8 +68,8 @@
 								  <span
 								    class="g-signin"
 								    data-callback="signinCallback"
-								    data-clientid="******.apps.googleusercontent.com"
-								    data-cookiepolicy=data-cookiepolicy="http://gdays.whales.com.ng"
+								    data-clientid="****.apps.googleusercontent.com"
+								    data-cookiepolicy=data-cookiepolicy="single_host_origin"
 								    data-requestvisibleactions="http://schemas.google.com/AddActivity"
 								    data-scope="https://www.googleapis.com/auth/plus.login" style="display: none">
 								  </span>
@@ -114,15 +113,19 @@
 					</div>
 					<div class="span5 media" style="padding-top: 50px;">
 					  <a class="pull-left" href="#">
-					    <img class="media-object" src="img/chrome.png" width="80px" height="auto" itemprop="image" id="icon"/>
+					    <img class="media-object" src="img/chrome.png" width="80px" height="auto" id="icon"/>
 					  </a>
 					  <div class="media-body">
-					    <h4 class="media-heading" itemprop="name" id="title">Google+ SignIn</h4>
-					    <p itemprop="description" id="description">Learn how to Integrate Google Plus sign-in to your web applications.</p>					    
+					    <h4 class="media-heading" id="title">Google+ SignIn</h4>
+					    <p itemprop="description" id="description">Learn how to Integrate Google Plus sign-in to your web applications.</p>
+					    <div>
+					    	<div class="pull-left">Speaker: <span><a href="#" id="speaker-name">Oyewale Oyediran</span></a></div>
+					    	<img src="img/map-icon.png" width="90px" height="90px" class="pull-right img-circle" id="speaker-img" />
+					    </div>					    
 					  </div>
-					  <div style="padding-top: 50px; padding-left: 50px;">
+					  <div style="padding-top: 30px; padding-left: 50px;">
 					  	<button class="btn btn-large btn-primary g-interactivepost" id="loud" data-contenturl="http://gdays.whales.com.ng/"
-							  data-clientid="*******.apps.googleusercontent.com"
+							  data-clientid="****.apps.googleusercontent.com"
 							  data-cookiepolicy="single_host_origin"
 							  data-prefilltext="I'm at the #gDays in Nigeria. I'm learning how to integrate Google+ into my applications #gDaysNigeria #gdg."
 							  data-calltoactionlabel="CHECKIN"
@@ -143,13 +146,15 @@
 					  </ul>
 					</div>
 				</div>
-		
+				<div>
+					<img itemprop="image" src="img/logo-220-168-gif.gif" />
+				</div>
 		    </div><!-- /.container -->
 	   </div>
 	    
 	    <div id="footer">
 	      <div class="container">
-	        <!--<p class="pull-right"><a href="#">Back to top</a></p>-->
+	        <p class="pull-right"><a href="https:github.com/waleoyediran/gdaysplus">Download the source on GitHub</a></p>
         <p>&copy; 2013 Google Developer Groups, Nigeria &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 	      </div>
 	    </div>

@@ -19,20 +19,6 @@ function signinCallback(authResult) {
 		   $('#revokeButton').show();
 		   $('#profile').show();
 		   $('#loud').removeAttr('disabled')
-		   // var options = {
-		    // contenturl: 'http://gdays.whales.com.ng/',
-		    // contentdeeplinkid: '',
-		    // clientid: '868611294351.apps.googleusercontent.com',
-		    // cookiepolicy: 'single_host_origin',
-		    // prefilltext: 'Im Learning about G+ at the gDays in Nigeria #gDaysNigeria #gdg',
-		    // calltoactionlabel: 'LEARN',
-		    // calltoactionurl: 'http://gdays.whales.com.ng/',
-		    // calltoactiondeeplinkid: '/pages/create'
-		  // };
-		  // // Call the render method when appropriate within your app to display
-		  // // the button.
-		  // gapi.interactivepost.render('sharePost', options);
-		  // console.log('rendered');
 		 });
 		});
 	} else if (authResult['error']) {
@@ -107,13 +93,31 @@ function session(i){
 		$('#cover').attr('src', 'img/'+sess.cover);
 		$('#loud').attr('data-prefilltext', sess.share);
 		
+		if (!(typeof gapi === "undefined")){
+			gapi.client.load('plus','v1', function(){
+			 var request = gapi.client.plus.people.get({
+			   'userId': sess.speakerid
+			 });
+			 request.execute(function(resp) {
+			 	//console.log(resp);
+			   //console.log('Retrieved profile for:' + resp.displayName);
+			   $('#speaker-name').html(resp.displayName);
+			   $('#speaker-name').attr('href', resp.url);
+			   $('#speaker-img').attr('src', resp.image.url+'&sz=90');		   
+			 });
+			});
+		}
+		
+		
 	});
+	
+	
 }
 
 
 $(document).ready(function(){
 	$('#revokeButton').click(disconnectUser);
-	session(0);
+	//session(0);
 	$('#board a').click(function(){
 		var attr = $(this).attr('data-attr');
 		//console.log(attr);
